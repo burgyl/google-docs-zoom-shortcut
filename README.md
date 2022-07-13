@@ -3,4 +3,4 @@ Userscript that lets you zoom with Ctrl + Mouse Wheel on Google Docs and Google 
 
 ## Installation
 
-Click [here](./google-docs-zoom-shortcut.user.js) and then click "Raw". It will suggest to install it if you have Tampermonkey or an equivalent extension.
+Click [here](https://github.com/burgyl/google-docs-zoom-shortcut/raw/main/google-docs-zoom-shortcut.user.js). It will suggest to install it if you have Tampermonkey or an equivalent extension installed.
