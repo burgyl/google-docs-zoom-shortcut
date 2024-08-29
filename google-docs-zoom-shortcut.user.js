@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         Google Docs Zoom Shortcut
-// @version      1.0.3
+// @version      1.0.4
 // @description  Lets you zoom with Ctrl + Mouse Wheel on Google Docs and Google Sheets
 // @author       Lucas Bürgy
+// @homepageURL  https://github.com/burgyl/google-docs-zoom-shortcut
 // @match        https://docs.google.com/document/*
 // @match        https://docs.google.com/spreadsheets/*
 // @icon         https://www.google.com/favicon.ico
