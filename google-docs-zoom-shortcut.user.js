@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Google Docs Zoom Shortcut
-// @version      1.0.1
+// @version      1.0.2
 // @description  Lets you zoom with Ctrl + Mouse Wheel on Google Docs and Google Sheets
 // @author       Lucas Bürgy
 // @match        https://docs.google.com/document/*
@@ -20,7 +20,7 @@ async function changeZoom(delta) {
     input = document.querySelector(INPUT_SELECTOR[i]);
   }
   if (input === null) {
-    console.log('Zoom input not found');
+    console.error('Zoom input not found');
     return;
   }
 
@@ -30,21 +30,12 @@ async function changeZoom(delta) {
 
   await input.focus();
 
-  // Don't work for now sadly, you have to manually press enter :(
-  input.dispatchEvent(new KeyboardEvent('keydown', {
-    key: "Enter",
+  input.dispatchEvent( new KeyboardEvent('keypress', {
     keyCode: 13,
-    code: "Enter",
-    which: 13,
-    altKey: false,
-    shiftKey: false,
-    ctrlKey: false,
-    metaKey: false,
   }));
 }
 
 (function () {
-
   window.addEventListener("wheel", function (event) {
     if (event.ctrlKey) {
       event.preventDefault();
@@ -55,6 +46,4 @@ async function changeZoom(delta) {
       }
     }
   }, { passive: false });
-
-  console.log('Zoom listener added');
 })();
